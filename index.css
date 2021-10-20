@@ -12,7 +12,7 @@
 }
 .container{
     margin: 0 auto;
-    max-width: 1152px;
+    max-width: 1360px;
     padding: 0 15px;
 }
 @media (min-width:576px){
@@ -37,6 +37,7 @@
 }
 body{
     font-family:'poppin', sans-serif;
+    width: 100%;
 }
 html{
     scroll-behavior: smooth;
@@ -50,7 +51,7 @@ html{
 header{
     background-color: var(--dark);
     clip-path: polygon(0 0,100% 0, 100% 100% , 75% 85%, 0 100%);
-    width: 100%;
+   
 
 }
 header nav .left a{
@@ -446,6 +447,7 @@ footer .footer-social{
     border: none;
     outline: none;
     cursor: pointer;
+    display: none;
 }
 .hamberger img{
     width: 30px;
@@ -456,6 +458,7 @@ footer .footer-social{
     left: 0;
     z-index: 1001;
     background: var(--light);
+    background: rgba(61,207,211,0.9);
     width: 100%;
     height: 100%;
     padding: 2rem;
@@ -495,11 +498,123 @@ footer .footer-social{
     text-decoration: none;
     font-size: 1.5rem;
 }
+.footer-social .icon{
+    width: 65px;
+    height: 65px;
+}
 @media(max-width:1010px){
     header #main-nav{
         display: none ;
     }
+    .hamberger{
+        display: block;
+    }
     .hero .left img{
         width: 260px;
     }
+    .hero .right h1{
+        font-size: 2rem;
+    }
+    .hero {
+        padding-top: 15rem;
+    }
+    .header{
+        clip-path: polygon(0 0,100% 0, 100% 100% , 40% 90%, 0 100%);
+    }
+    section.about .about-me-img{
+        height:390px;
+    }
+    
+    section.about .flex-1{
+        margin: 2rem;
+        }
+    section.services .card-wraper{
+        
+    grid-template-columns: repeat(2, 1fr);
+    }
+    section.work .card-wraper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    section.blog .card-wraper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.blog .card-wraper .card .img{
+        width: 100%;
+    }
+    section.blog{
+        clip-path: polygon(0 0,100% 0, 100% 100% , 42% 97%, 0 100%);
+    }
+    .about .social{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.contact input{
+        border: 1px solid black;
+    }
+    .footer-social .icon{
+        width: 65px;
+        height: 65px;
+    }
+    
+
+}
+@media (max-width:576px){
+    .hero{
+        flex-direction: column;
+    }
+    header{
+        clip-path: polygon(0 0,100% 0, 100% 100% , 42% 97%, 0 100%);
+    }
+    .hero .right{
+        position: absolute;
+        top: 400px;
+        padding: 0 1rem;
+        background: linear-gradient(rgba(0 0 0 0),rgba(0 0 0 0.9));
+        font-family: 'Times New Roman', Times, serif;
+    }
+    .hero .left{
+        margin-top: -5rem;
+        margin-right: -9rem;
+        padding-bottom: 3rem;
+    }
+    .about-inner-wrap{
+         flex-direction: column;
+    }
+    .about .right{
+        text-align: center;
+        margin-top: 1rem;
+    }
+    section{
+        padding: 4rem 0;
+    }
+    section.services .card-wraper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.work .card-wraper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    section.contact .card-wraper {
+        display: grid;
+        grid-template-columns: repeat(1 ,1fr);
+        grid-gap: -3rem;
+    }
+    section.contact .input-wrap {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    section.contact .input-wrap-1 textarea {
+        padding: 0.5rem;
+        font-size: 1rem;
+        border: 1px solid black;
+    }
+    header .branding .logo{
+        position: absolute;
+        top: 300px;
+        left: 100px;
+    }
+   
+    
+    
 }
